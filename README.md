@@ -1,4 +1,3 @@
-```markdown
 # Personal Portfolio Website
 
 This repository contains the code for my personal portfolio website, designed to showcase my skills and experience with a clean and modern theme.
@@ -25,4 +24,3 @@ All images used throughout the website are royalty free and to the best of my kn
 ## Explore the Code!
 
 This repository provides a view into my approach to web development using HTML and CSS. Feel free to view the code and explore!
-```
