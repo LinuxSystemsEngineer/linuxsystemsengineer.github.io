@@ -1,6 +1,6 @@
-# Personal Portfolio Website
+# Personal Professional Website
 
-This repository contains the code for my personal portfolio website, designed to showcase my skills and experience with a clean and modern theme.
+This GitHub repository contains the code for my personal and professional websites. It is designed to showcase my skills and experience with a clean, modern theme.
 
 ## Technologies Used
 
@@ -9,17 +9,17 @@ This repository contains the code for my personal portfolio website, designed to
 
 ## Development Process
 
-The website started its journey based on the free "Startup Template" offered by W3Schools ([W3Schools Templates](https://www.w3schools.com/w3css/w3css_templates.asp)). This template served as a solid base, allowing me to customize it and create a website that reflects my personal brand and highlights my work experiences.
+The website started its journey based on the free "Startup Template" offered by W3Schools ([W3Schools Templates](https://www.w3schools.com/w3css/w3css_templates.asp)). This template served as a solid base, allowing me to customize it and create a website that reflects my brand and highlights my work experiences.
 
 ## Image Sources
 
-All images used throughout the website are royalty free and to the best of my knowledge (free and open source). My images are sourced from the following reputable platforms:
+All images used throughout the website are royalty-free and, to the best of my knowledge (free and open source)
 
 - [Pexels](https://www.pexels.com/)
 - [Unsplash](https://unsplash.com/)
 - [Pixabay](https://pixabay.com/)
 
-*Note: The technology and tools svg images are from https://devicon.dev/.*
+*Note: The technology and tools SVG images are from https://devicon.dev/.*
 
 ## Explore the Code!
 
