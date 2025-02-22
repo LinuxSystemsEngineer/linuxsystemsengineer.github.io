@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>LinuxSystemsEngineer</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="./css/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" type="image/x-icon" href="./img/favicon.ico">
+
+  <style>
+    #myBtn {
+      display: none;
+      position: fixed;
+      bottom: 20px;
+      right: 30px;
+      z-index: 99;
+      font-size: 18px;
+      border: none;
+      outline: none;
+      background-color: black;
+      color: white;
+      cursor: pointer;
+      padding: 15px;
+      border-radius: 4px;
+    }
+
+    #myBtn:hover {
+      background-color: blue;
+      color: white;
+    }
+
+    body,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-family: "Raleway", sans-serif
+    }
+
+    body,
+    html {
+      height: 100%;
+      line-height: 1.8;
+    }
+
+    /* Full height image header */
+    .bgimg-1 {
+      background-position: center;
+      background-size: cover;
+      background-image: url("./img/mac.jpg");
+      min-height: 100%;
+    }
+
+    .w3-bar .w3-button {
+      padding: 16px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <button onclick="topFunction()" id="myBtn" title="Go to top">˄ Back to top</button>
+
+  <div style="background-color:black;color:white;padding:30px">Scroll Down</div>
+
+  <script>
+    // Get the button
+    let mybutton = document.getElementById("myBtn");
+
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function () { scrollFunction() };
+
+    function scrollFunction() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        mybutton.style.display = "block";
+      } else {
+        mybutton.style.display = "none";
+      }
+    }
+
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+    }
+  </script>
+
+
+  <!-- Navbar (sit on top) -->
+  <div class="w3-top">
+    <div class="w3-bar w3-white w3-card" id="myNavbar">
+      <a href="#home" class="w3-bar-item w3-button w3-wide">MENU</a>
+      <!-- Right-sided navbar links -->
+      <div class="w3-right w3-hide-small">
+        <a href="#certifications" class="w3-bar-item w3-button"><i class="fa fa-trophy"></i> CERTIFICATIONS</a>
+        <a href="#resume" class="w3-bar-item w3-button"><i class="fa fa-user"></i> RESUME</a>
+        <a href="#work" class="w3-bar-item w3-button"><i class="fa fa-th"></i> WORK</a>
+        <a href="#linux" class="w3-bar-item w3-button"><i class="fa fa-linux"></i> LINUX</a>
+        <a href="#contact" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i> CONTACT</a>
+      </div>
+      <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+
+      <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium"
+        onclick="w3_open()">
+        <i class="fa fa-bars"></i>
+      </a>
+    </div>
+  </div>
+
+  <!-- Sidebar on small screens when clicking the menu icon -->
+  <nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large"
+    style="display:none" id="mySidebar">
+    <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close ×</a>
+    <a href="#certifications" onclick="w3_close()" class="w3-bar-item w3-button">CERTIFICATIONS</a>
+    <a href="#resume" onclick="w3_close()" class="w3-bar-item w3-button">RESUME</a>
+    <a href="#work" onclick="w3_close()" class="w3-bar-item w3-button">WORK</a>
+    <a href="#linux" onclick="w3_close()" class="w3-bar-item w3-button">LINUX</a>
+    <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button">CONTACT</a>
+  </nav>
+
+  <!-- Header with full-height image -->
+  <header class="bgimg-1 w3-display-container w3-grayscale-min" id="home">
+    <div class="w3-display-left w3-text-white" style="padding:48px">
+      <span class="w3-jumbo w3-hide-small">Blake Jones</span><br>
+      <span class="w3-xxlarge w3-hide-large w3-hide-medium">Blake Jones</span><br>
+      <span class="w3-large">is a proven Linux Systems Administrator, progressing towards becoming a Linux Systems Engineer.</span>
+      <p><a href="#certifications"
+        class="w3-button w3-white w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off">Learn
+        more</a></p>
+    </div>
+    
+
+
+    <div class="w3-display-bottomleft w3-text-white w3-large" style="padding:24px 48px">
+
+      <a href="https://github.com/LinuxSystemsEngineer" style="margin-right: 20px;" target="_blank">
+          <i class="fa fa-github w3-hover-opacity" style="font-size: 64px;"></i>
+      </a>
+      
+      <a href="https://www.linkedin.com/in/blake-jones-linux/" target="_blank">
+          <i class="fa fa-linkedin w3-hover-opacity" style="font-size: 64px;"></i>
+      </a>
+    
+  </div>
+   
+
+  </header>
+
+  <!-- Certifications Section -->
+  <div class="w3-container" style="padding:128px 16px" id="certifications">
+    <h3 class="w3-center">CERTIFICATIONS</h3>
+    <p class="w3-center w3-large">qualifications that support my experience in specific areas of information technology.
+    </p>
+    <div class="w3-row-padding w3-center" style="margin-top:64px">
+      <div class="w3-quarter">
+        <i class="fa fa-linux w3-margin-bottom w3-jumbo w3-center"></i>
+        <p class="w3-large">The Linux Foundation</p>
+        <p>Linux Foundation Certified System Administrator LFCS-1500-0462-0100 (Sept. 2015 - Sept. 2017)</p>
+      </div>
+      <div class="w3-quarter">
+        <i class="fa fa-server w3-margin-bottom w3-jumbo"></i>
+        <p class="w3-large">Cisco Networking Academy </p>
+        <p>Introduction to Data Science</p>
+      </div>
+      <div class="w3-quarter">
+        <i class="fa fa-server w3-margin-bottom w3-jumbo"></i>
+        <p class="w3-large">Cisco Networking Academy </p>
+        <p>Introduction to Cybersecurity</p>
+      </div>
+      <div class="w3-quarter">
+        <i class="fa fa-server w3-margin-bottom w3-jumbo"></i>
+        <p class="w3-large">Cisco Networking Academy </p>
+        <p>Introduction to IoT</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Promo Section - "We know design" -->
+  <div class="w3-container w3-light-grey" style="padding:128px 16px">
+    <div class="w3-row-padding">
+      <div class="w3-col m6">
+        <h3>Information Technology Professional</h3>
+        <p>Experienced Linux Systems Administrator with a comprehensive background in providing systems administration for infrastructure, servers, web portals, databases, git version control, software development life cycles, backups, security systems, networking equipment, VoIP systems, hardware, and software. Additionally, I work as an Information Technology Professional for managers, customers, and employees.</p>
+        <p><a href="#work" class="w3-button w3-black"><i class="fa fa-th"> </i> View My Work</a></p>
+      </div>
+      <div class="w3-col m6">
+        <img class="w3-image w3-round-large" src="./img/phone_buildings.jpg" alt="Buildings" width="700" height="394">
+      </div>
+    </div>
+  </div>
+
+  <!-- Resume Section - "Resume" -->
+  <div class="w3-container w3-light-white" style="padding:128px 16px" id="resume">
+    <div class="w3-row-padding w3-display-container">
+
+      <h3><b>RESUME:<b /></h3>
+      <br>
+      <h3>Blake Jones</h3>
+      <p>Carbondale, IL, 62901</p>
+
+      <br>
+
+      <p>website: https://linuxsystemsengineer.github.io/</p>
+      <p>github: https://github.com/LinuxSystemsEngineer</p>
+      <p>linkedin: https://www.linkedin.com/in/blake-jones-linux/</p>
+
+      <br>
+
+      <p><b>Summary of Qualifications:</b></p>
+
+      <p>Experienced Linux Systems Administrator proficient in optimizing infrastructure, servers, web portals, databases, git version control, software development life cycles, backups, security systems, networking equipment, voip systems, hardware, and software. I have proven my ability to work independently and as part of a team to successfully complete projects, with experience in a variety of technologies.</p><br>
+
+      <p>Certifications:</p>
+
+
+      <ul>
+        <li>Linux Foundation Certified System Administrator LFCS-1500-0462-0100 (September 2015 - September 2017)</li>
+        <li>Cisco Networking Academy Introduction to Data Science</li>
+        <li>Cisco Networking Academy Introduction to Cybersecurity</li>
+        <li>Cisco Networking Academy Introduction to IoT</li>
+      </ul><br>
+
+      <p>Systems Administrator Skills:</p>
+
+      <ul>
+        <li>Linux Systems Administrator</li>
+        <li>Windows Server Administrator</li>
+        <li>Active Directory</li>
+        <li>Group Policy</li>
+        <li>Backups</li>
+        <li>Networking</li>
+        <li>OpenVPN</li>
+        <li>Hypervisors and VMs</li>
+        <li>Docker Containers</li>
+        <li>Account Provisioning</li>
+        <li>NFS and FTP</li>
+        <li>DNS and DHCP</li>
+        <li>SSH and Encryption</li>
+      </ul>
+
+      <p>Programming Skills:</p>
+
+      <ul>
+        <li>Python, PHP, JS, BASH</li>
+        <li>Git version control</li>
+        <li>Web Portals</li>
+        <li>Ansible Automation</li>
+        <li>MySQL, SQLite, PostgreSQL</li>
+        <li>Testing and Debugging</li>
+        <li>JSON, XML, YAML</li>
+        <li>DokuWiki and MediaWiki</li>
+        <li>Apache and Nginx</li>
+        <li>SSL and Single Sign On</li>
+        <li>Data Visualization</li>
+        <li>Mobile Responsive Design</li>
+        <li>Vim, Nano, VS Code</li>
+      </ul>
+
+      <p>Soft Skills:</p>
+
+      <ul>
+        <li>Great Attitude</li>
+        <li>Team Player</li>
+        <li>Highly Organized</li>
+        <li>Hard Worker</li>
+        <li>Fast Learner</li>
+        <li>Self Motivated</li>
+        <li>Leadership</li>
+        <li>Problem Solver</li>
+        <li>Communication</li>
+        <li>Documentation Management</li>
+        <li>Attention to Detail</li>
+        <li>Time Management</li>
+        <li>Emotional Intelligence</li>
+      </ul><br>
+
+      <p>Experience:</p><br>
+      <p>Advanced Computing Trends</p>
+      <p>02/18 to Present</p>
+      <p>Linux Systems Administrator, and Business Owner</p>
+      <p>Providing advanced technical support and services to customers, including Linux system administration, modern web design, and IT consulting. Authored numerous how to documents, technical manuals, and guides related to Linux server systems. Created customized virtual machines, docker containers, programming solutions, and ansible playbooks that eliminated human error and increased speed efficiency 5x. Through excellent documentation, automated programming solutions, and efficient systems, we save our customers both time and money.</p><br>
+      
+      <p>Southern Illinois University Carbondale</p>
+      <p>06/2023 to 12/2024</p>
+      <p>Network Engineering Student Worker</p>
+      <p>Managing and maintaining campus area network, including layer 2 network switches and wifi devices, using command line interface. Engineered a scalable and reusable python based django rest framework datatables boilerplate with an sqlite backend, replacing legacy excel file based solutions. This implementation improved processing speed 6x, reducing processing time 83.33% and potentially saved our company both time and money.</p><br>
+
+      <p>EMAC, Inc</p>
+      <p>09/2011 to 02/2018</p>
+      <p>Systems Administrator</p>
+      <p>Administered and optimized the company's infrastructure, including servers, web portals, databases, git version control, software development life cycles, backups, security systems, networking equipment, voip systems, computers, peripherals, hardware, and software. Provided technical support for managers, employees, and customers. Spearheaded initiatives that increased system uptime from 88% to 98%, resulting in a 10% reduction in downtime and enhanced system reliability. The implementation of these projects saved our company both time and money.</p><br>
+
+      <p>Marion Reservation Center</p>
+      <p>10/2006 to 02/2007</p>
+      <p>IT Help Desk Technician</p>
+      <p>Provided remote technical support to hotel guests, primarily helping them connect to the hotel's wifi network. Performed general network support to the hotel's general managers, supervisors, and employees.
+      </p><br>
+
+      <p>Southern Illinois University Carbondale</p>
+      <p>08/2005 to 08/2006</p>
+      <p>Student Network Support Specialist</p>
+      <p>Provided comprehensive computer and network support to students, faculty, and employees at Southern Illinois University Carbondale's Morris Library. Worked as both a computer technician and network technician, handling a wide range of duties. Played a key role in relocating and reconnecting desktop PCs to various campus locations during the library's renovation period.</p><br>
+
+      <p>Education:</p>
+      <br>
+      <p>Bachelor of Science, Majoring in Information Technology</p>
+      <p>Southern Illinois University, Carbondale Illinois 62901</p>
+      <p>Expected Graduation: Dec 2025</p>
+      <p>Dean's List: Fall 2024</p>
+      <p>Dean's List: Spring 2024</p>
+      <p>Dean's List: Summer 2023</p><br>
+
+      <p>Associate of Applied Science, Majoring in Computer Information Systems</p>
+      <p>John A. Logan College, Carterville Illinois 62918</p>
+      <p>Graduated: May 2005</p>
+      <p>Dean's List: Spring 2025</p><br>
+
+    </div>
+  </div>
+
+  <!-- Work Experience Section "Statistics" -->
+  <div class="w3-container w3-row w3-center w3-blue w3-padding-64">
+    <div class="w3-quarter">
+      <span class="w3-xxlarge">14+</span>
+      <br>Years Experience
+    </div>
+    <div class="w3-quarter">
+      <span class="w3-xxlarge">50+</span>
+      <br>Projects Done
+    </div>
+    <div class="w3-quarter">
+      <span class="w3-xxlarge">100+</span>
+      <br>Happy Customers
+    </div>
+    <div class="w3-quarter">
+      <span class="w3-xxlarge">300+</span>
+      <br>Meetings
+    </div>
+  </div>
+
+  <!-- Work Section -->
+  <div class="w3-container" style="padding:128px 16px" id="work">
+    <h3 class="w3-center">MY WORK</h3>
+    <p class="w3-center w3-large">Tools and Technology I build with:</p>
+
+    <div class="w3-row-padding" style="margin-top:64px">
+      <div class="w3-col l3 m6"><img src="./img/ansible-original-wordmark.svg" width="250" height="250" onclick="onClick(this)" class="w3-hover-opacity" alt="Ansible"></div>
+
+      <div class="w3-col l3 m6"><img src="./img/apache-original-wordmark.svg" width="250" height="250" onclick="onClick(this)" class="w3-hover-opacity" alt="Apache"></div>
+      
+      <div class="w3-col l3 m6"><img src="./img/arduino-original-wordmark.svg" width="250" height="250" onclick="onClick(this)" class="w3-hover-opacity" alt="Arduino"></div>
+      
+      <div class="w3-col l3 m6"><img src="./img/awk-original-wordmark.svg" width="250" height="250" onclick="onClick(this)" class="w3-hover-opacity" alt="AWK"></div>
+      
+      <div class="w3-col l3 m6"><img src="./img/bash-original.svg" width="250" height="250" onclick="onClick(this)" class="w3-hover-opacity" alt="Bash"></div>
+      
+      <div class="w3-col l3 m6"><img src="./img/bootstrap-original-wordmark.svg" width="250" height="250" onclick="onClick(this)" class="w3-hover-opacity" alt="Bootstrap"></div>
+      
+      <div class="w3-col l3 m6"><img src="./img/chrome-original-wordmark.svg" width="250" height="250" onclick="onClick(this)" class="w3-hover-opacity" alt="Chrome"></div>
+      
+      <div class="w3-col l3 m6"><img src="./img/css3-original-wordmark.svg" width="250" height="250" onclick="onClick(this)" class="w3-hover-opacity" alt="CSS3"></div>
+      
+      <div class="w3-col l3 m6"><img src="./img/d3js-original.svg" width="250" height="250" onclick="onClick(this)" class="w3-hover-opacity" alt="D3.js"></div>
+      
+      <div class="w3-col l3 m6"><img src="./img/debian-original-wordmark.svg" width="250" height="250" onclick="onClick(this)" class="w3-hover-opacity" alt="Debian"></div>
+      
+      <div class="w3-col l3 m6"><img src="./img/django-plain-wordmark.svg" width="250" height="250" onclick="onClick(this)" class="w3-hover-opacity" alt="Django"></div>
+      
+      <div class="w3-col l3 m6"><img src="./img/djangorest-plain.svg" width="250" height="250" onclick="onClick(this)" class="w3-hover-opacity" alt="Django REST Framework"></div>
+      
+      <div class="w3-col l3 m6"><img src="./img/docker-original-wordmark.svg" width="250" height="250" onclick="onClick(this)" class="w3-hover-opacity" alt="Docker"></div>
+      
+      <div class="w3-col l3 m6"><img src="./img/fedora-original.svg" width="250" height="250" onclick="onClick(this)" class="w3-hover-opacity" alt="Fedora"></div>
+      
+      <div class="w3-col l3 m6"><img src="./img/filezilla-original-wordmark.svg" width="250" height="250" onclick="onClick(this)" class="w3-hover-opacity" alt="FileZilla"></div>
+      
+      <div class="w3-col l3 m6"><img src="./img/firefox-original-wordmark.svg" width="250" height="250" onclick="onClick(this)" class="w3-hover-opacity" alt="Firefox"></div>
+      
+      <div class="w3-col l3 m6"><img src="./img/flask-original-wordmark.svg" width="250" height="250" onclick="onClick(this)" class="w3-hover-opacity" alt="Flask"></div>
+      
+      <div class="w3-col l3 m6"><img src="./img/git-original-wordmark.svg" width="250" height="250" onclick="onClick(this)" class="w3-hover-opacity" alt="Git"></div>
+      
+      <div class="w3-col l3 m6"><img src="./img/github-original-wordmark.svg" width="250" height="250" onclick="onClick(this)" class="w3-hover-opacity" alt="GitHub"></div>
+      
+      <div class="w3-col l3 m6"><img src="./img/google-original-wordmark.svg" width="250" height="250" onclick="onClick(this)" class="w3-hover-opacity" alt="Google"></div>
+      
+      <div class="w3-col l3 m6"><img src="./img/html5-original-wordmark.svg" width="250" height="250" onclick="onClick(this)" class="w3-hover-opacity" alt="HTML5"></div>
+      
+      <div class="w3-col l3 m6"><img src="./img/javascript-original.svg" width="250" height="250" onclick="onClick(this)" class="w3-hover-opacity" alt="JAVASCRIPT"></div>
+      
+      <div class="w3-col l3 m6"><img src="./img/jquery-original-wordmark.svg" width="250" height="250" onclick="onClick(this)"class="w3-hover-opacity" alt="JQUERY"></div>
+          
+      <div class="w3-col l3 m6"><img src="./img/json-original.svg" width="250" height="250" onclick="onClick(this)" class="w3-hover-opacity" alt="JSON"></div>
+      
+      <div class="w3-col l3 m6"><img src="./img/jupyter-original-wordmark.svg" width="250" height="250" onclick="onClick(this)" class="w3-hover-opacity" alt="Jupyter"></div>
+      
+      <div class="w3-col l3 m6"><img src="./img/kaggle-original-wordmark.svg" width="250" height="250" onclick="onClick(this)" class="w3-hover-opacity" alt="Kaggle"></div>
+      
+      <div class="w3-col l3 m6"><img src="./img/linkedin-original-wordmark.svg" width="250" height="250" onclick="onClick(this)" class="w3-hover-opacity" alt="LinkedIn"></div>
+      
+      <div class="w3-col l3 m6"><img src="./img/linux-original.svg" width="250" height="250" onclick="onClick(this)" class="w3-hover-opacity" alt="Linux"></div>
+      
+      <div class="w3-col l3 m6"><img src="./img/mariadb-original-wordmark.svg" width="250" height="250" onclick="onClick(this)" class="w3-hover-opacity" alt="MariaDB"></div>
+      
+      <div class="w3-col l3 m6"><img src="./img/markdown-original.svg" width="250" height="250" onclick="onClick(this)" class="w3-hover-opacity" alt="Markdown"></div>
+          
+      <div class="w3-col l3 m6"><img src="./img/mysql-original-wordmark.svg" width="250" height="250" onclick="onClick(this)" class="w3-hover-opacity" alt="MySQL"></div>
+      
+      <div class="w3-col l3 m6"><img src="./img/nginx-original.svg" width="250" height="250" onclick="onClick(this)" class="w3-hover-opacity" alt="Nginx"></div>
+          
+      <div class="w3-col l3 m6"><img src="./img/php-original.svg" width="250" height="250" onclick="onClick(this)" class="w3-hover-opacity" alt="PHP"></div>
+      
+      <div class="w3-col l3 m6"><img src="./img/postgresql-original-wordmark.svg" width="250" height="250" onclick="onClick(this)" class="w3-hover-opacity" alt="PostgreSQL"></div>
+      
+      <div class="w3-col l3 m6"><img src="./img/putty-original.svg" width="250" height="250" onclick="onClick(this)" class="w3-hover-opacity" alt="Putty"></div>
+      
+      <div class="w3-col l3 m6"><img src="./img/python-original-wordmark.svg" width="250" height="250" onclick="onClick(this)" class="w3-hover-opacity" alt="Python"></div>
+      
+      <div class="w3-col l3 m6"><img src="./img/r-original.svg" width="250" height="250" onclick="onClick(this)" class="w3-hover-opacity" alt="R"></div>
+      
+      <div class="w3-col l3 m6"><img src="./img/raspberrypi-original-wordmark.svg" width="250" height="250" onclick="onClick(this)" class="w3-hover-opacity" alt="Raspberry Pi"></div>
+      
+      <div class="w3-col l3 m6"><img src="./img/rockylinux-original-wordmark.svg" width="250" height="250" onclick="onClick(this)" class="w3-hover-opacity" alt="RockyLinux"></div>
+      
+      <div class="w3-col l3 m6"><img src="./img/rstudio-original.svg" width="250" height="250" onclick="onClick(this)" class="w3-hover-opacity" alt="RStudio"></div>
+      
+      <div class="w3-col l3 m6"><img src="./img/splunk-original-wordmark.svg" width="250" height="250" onclick="onClick(this)" class="w3-hover-opacity" alt="Splunk"></div>
+      
+      <div class="w3-col l3 m6"><img src="./img/sqlite-original-wordmark.svg" width="250" height="250" onclick="onClick(this)" class="w3-hover-opacity" alt="SQLite"></div>
+      
+      <div class="w3-col l3 m6"><img src="./img/stackoverflow-original-wordmark.svg" width="250" height="250" onclick="onClick(this)" class="w3-hover-opacity" alt="Stack Overflow"></div>
+      
+      <div class="w3-col l3 m6"><img src="./img/tomcat-original-wordmark.svg" width="250" height="250" onclick="onClick(this)" class="w3-hover-opacity" alt="Tomcat"></div>
+      
+      <div class="w3-col l3 m6"><img src="./img/ubuntu-original-wordmark.svg" width="250" height="250" onclick="onClick(this)" class="w3-hover-opacity" alt="Ubuntu"></div>
+      
+      <div class="w3-col l3 m6"><img src="./img/vim-original.svg" width="250" height="250" onclick="onClick(this)" class="w3-hover-opacity" alt="Vim"></div>
+      
+      <div class="w3-col l3 m6"><img src="./img/vscode-original-wordmark.svg" width="250" height="250" onclick="onClick(this)" class="w3-hover-opacity" alt="Visual Studio Code"></div>
+      
+      <div class="w3-col l3 m6"><img src="./img/wordpress-original.svg" width="250" height="250" onclick="onClick(this)" class="w3-hover-opacity" alt="WordPress"></div>
+      
+      <div class="w3-col l3 m6"><img src="./img/xml-original.svg" width="250" height="250" onclick="onClick(this)" class="w3-hover-opacity" alt="XML"></div>
+      
+      <div class="w3-col l3 m6"><img src="./img/yaml-original.svg" width="250" height="250" onclick="onClick(this)" class="w3-hover-opacity" alt="YAML"></div>
+
+    </div>
+  </div>
+
+  <!-- Modal for full size images on click-->
+  <div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
+    <span class="w3-button w3-xxlarge w3-black w3-padding-large w3-display-topright" title="Close Modal Image">×</span>
+    <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+      <img id="img01" class="w3-image">
+      <p id="caption" class="w3-opacity w3-large"></p>
+    </div>
+  </div>
+
+  <!-- Skills Section -->
+  <div class="w3-container w3-light-blue w3-padding-64">
+    <div class="w3-row-padding">
+      <div class="w3-col m6">
+        <h3>My Skills.</h3>
+        <p>As a Linux Systems Administrator, I ensure stable and secure system operations, minimizing downtime, and
+          enhancing productivity.<br></p>
+        <p>My programming skills allow me to automate tasks and build custom solutions, increasing efficiency, and
+          reducing operational costs.<br></p>
+        <p>With great interpersonal skills, I excel in team collaboration, clear communication, effective problem
+          solving, ensuring project completion, and customer satisfaction.<br></p>
+      </div>
+      <br><br>
+      <div class="w3-col m6">
+        <p class="w3-wide"><i class="fa fa-linux w3-margin-right"></i>Linux Administrator</p>
+        <div class="w3-grey">
+          <div class="w3-container w3-dark-grey w3-center" style="width:95%">95%</div>
+        </div>
+        <p class="w3-wide"><i class="fa fa-terminal w3-margin-right"></i>Programming</p>
+        <div class="w3-grey">
+          <div class="w3-container w3-dark-grey w3-center" style="width:90%">90%</div>
+        </div>
+        <p class="w3-wide"><i class="fa fa-group w3-margin-right"></i>Interpersonal</p>
+        <div class="w3-grey">
+          <div class="w3-container w3-dark-grey w3-center" style="width:85%">85%</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Linux Section -->
+  <div class="w3-container w3-center w3-dark-grey" style="padding:128px 16px" id="linux">
+    <h3>LINUX SYSTEM:</h3>
+    <p class="w3-large">there are three main parts</p>
+    <div class="w3-row-padding" style="margin-top:64px">
+      <div class="w3-third w3-section">
+        <ul class="w3-ul w3-white w3-hover-shadow">
+          <li class="w3-black w3-xlarge w3-padding-32">Shell</li>
+          <li class="w3-padding-16"><b>Bourne Again Shell</b> (bash)</li>
+          <li class="w3-padding-16"><b>Friendly Interactive Shell</b> (fish)</li>
+          <li class="w3-padding-16"><b>C Shell</b> (csh)</li>
+          <li class="w3-padding-16"><b>Z Shell</b> (zsh)</li>
+          <li class="w3-padding-16">
+            <span class="w3-opacity"><b>interface between:</b><br>
+              <span class="w3-opacity">end-user and kernel</span>
+          </li>
+          <li class="w3-light-grey w3-padding-24">
+          </li>
+        </ul>
+      </div>
+      <div class="w3-third">
+        <ul class="w3-ul w3-white w3-hover-shadow">
+          <li class="w3-blue w3-xlarge w3-padding-48">Kernel</li>
+          <li class="w3-padding-16"><b>Main component</b> of Linux (OS)</li>
+          <li class="w3-padding-16"><b>Core interface</b> between hw and procs</li>
+          <li class="w3-padding-16"><b>Manages resources</b> efficiently</li>
+          <li class="w3-padding-16"><b>Manages</b> mem, procs, drivers, and system</li>
+          <li class="w3-padding-16">
+            <span class="w3-opacity"><b>central component of linux (os):</b><br>
+              <span class="w3-opacity">manages resources and services</span>
+          </li>
+          <li class="w3-light-grey w3-padding-24">
+          </li>
+        </ul>
+      </div>
+      <div class="w3-third w3-section">
+        <ul class="w3-ul w3-white w3-hover-shadow">
+          <li class="w3-black w3-xlarge w3-padding-32">Programs</li>
+          <li class="w3-padding-16"><b>Multimedia</b> FFmpeg</li>
+          <li class="w3-padding-16"><b>Version control</b> git</li>
+          <li class="w3-padding-16"><b>Virtual machines</b> qemu-kvm</li>
+          <li class="w3-padding-16"><b>Containers</b> docker</li>
+          <li class="w3-padding-16">
+            <span class="w3-opacity"><b>linux refers to programs as:</b><br>
+              <span class="w3-opacity">packages</span>
+          </li>
+          <li class="w3-light-grey w3-padding-24">
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Contact Section -->
+  <div class="w3-container w3-light-grey" style="padding:128px 16px" id="contact">
+    <h3 class="w3-center">CONTACT</h3>
+    <p class="w3-center w3-large"></p>
+    <div style="margin-top:48px">
+      <p><i class="fa fa-map-marker fa-fw w3-xxlarge w3-margin-right"></i> Carbondale, Illinois USA</p>
+      <p><i class="fa fa-code fa-fw w3-xxlarge w3-margin-right"></i> Github: <a href="https://github.com/LinuxSystemsEngineer" target="_blank" style="color: blue; text-decoration: none;" onmouseover="this.style.color='black'" onmouseout="this.style.color='blue'">https://github.com/LinuxSystemsEngineer</a></p>
+      <p><i class="fa fa-link fa-fw w3-xxlarge w3-margin-right"></i> LinkedIn: <a href="https://www.linkedin.com/in/blake-jones-linux/" target="_blank" style="color: blue; text-decoration: none;" onmouseover="this.style.color='black'" onmouseout="this.style.color='blue'">https://www.linkedin.com/in/blake-jones-linux/</a></p>
+            
+      <br>
+  <!-- Image of location/map -->
+      <img src="./img/map.jpg" class="w3-image w3-greyscale" style="width:100%;margin-top:48px">
+    </div>
+  </div>
+
+<!-- Footer -->
+<footer class="w3-center w3-black w3-padding-64">
+  <div class="w3-xlarge w3-section">
+      <a href="https://github.com/LinuxSystemsEngineer" style="margin-right: 20px;" target="_blank">
+          <i class="fa fa-github w3-hover-opacity" style="font-size: 64px;"></i>
+      </a>
+      
+      <a href="https://www.linkedin.com/in/blake-jones-linux/" target="_blank">
+          <i class="fa fa-linkedin w3-hover-opacity" style="font-size: 64px;"></i>
+      </a>
+  </div>
+  <p>Powered with <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank"
+      class="w3-hover-text-green">w3.css</a></p>
+</footer>
+
+
+  <script>
+    // Modal Image Gallery
+    function onClick(element) {
+      document.getElementById("img01").src = element.src;
+      document.getElementById("modal01").style.display = "block";
+      var captionText = document.getElementById("caption");
+      captionText.innerHTML = element.alt;
+    }
+
+
+    // Toggle between showing and hiding the sidebar when clicking the menu icon
+    var mySidebar = document.getElementById("mySidebar");
+
+    function w3_open() {
+      if (mySidebar.style.display === 'block') {
+        mySidebar.style.display = 'none';
+      } else {
+        mySidebar.style.display = 'block';
+      }
+    }
+
+    // Close the sidebar with the close button
+    function w3_close() {
+      mySidebar.style.display = "none";
+    }
+  </script>
+
+</body>
+
+</html>
